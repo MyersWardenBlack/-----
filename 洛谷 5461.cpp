@@ -4,7 +4,7 @@
 #include <cstdio>
 using namespace std;
 
-int a[1024][1024];
+int a[1050][1050];
 void cal(int x, int y, int n)
 {
     if(n == 0)
@@ -13,9 +13,9 @@ void cal(int x, int y, int n)
     }
     else
     {
-        cal(x, y+1<<n-1, n-1);
-        cal(x+1<<n-1, y, n-1);
-        cal(x+1<<n-1, y+1<<n-1, n-1);
+        cal(x, y+(1<<n-1), n-1);                //分成四份之后每份的左上角
+        cal(x+(1<<n-1), y, n-1);                // 1<<(n-1) 等于 1*2^(n-1)
+        cal(x+(1<<n-1), y+(1<<n-1), n-1);   // 1<<n-1 一定要用括号包起来 否则就会被认为是 (y+1)*2^(n-1)
     }
 }
 
