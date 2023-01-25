@@ -4,7 +4,7 @@
 #include <cstdio>
 using namespace std;
 
-int a[1050][1050];
+int a[1050][1050];                          //a[1024][1024] 也能通过
 void cal(int x, int y, int n)
 {
     if(n == 0)
