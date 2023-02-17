@@ -1,4 +1,4 @@
-https://www.acwing.com/problem/content/description/3771/
+//https://www.acwing.com/problem/content/description/3771/
 //思路讲解：把x分成很多组，每一组需要减去多少个才合适
 
 #include <iostream>
