@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <algorithm>
-using namespace std;        
+using namespace std;
 
 int n;      //字符串长度是n
 
@@ -18,9 +18,12 @@ int main()
         {
             int j = i + 1;
             while(str[j] == 'x' && j < n) j++;  //循环结束时，j 是'x'的下一个字符索引
-            res += max(j - i - 2, 0);     //j-i 是每一组'x'的长度 如果'x'长度小于3，则j-i-2 <= 0 ；
-                                          //                    如果'x'长度大于等于3，则j-i-2 > 0，取最大值
-            i = j - 1;
+            res += max(j - i - 2, 0);
+            
+            // j-i 是每一组'x'的长度 如果'x'长度小于3，则j-i-2 <= 0 ；
+            // 如果'x'长度大于等于3，则j-i-2 > 0，取最大值
+            
+            i = j - 1;  //外层的for循环i会自动+1，所以i = j - 1;
         }
     }
     cout<<res<<endl;
