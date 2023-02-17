@@ -1,7 +1,9 @@
+https://www.acwing.com/problem/content/description/3771/
+//思路讲解：把x分成很多组，每一组需要减去多少个才合适
+
 #include <iostream>
-#include <cstring>
 #include <algorithm>
-using namespace std;        //思路讲解：把x分成很多组，每一组需要减去多少个才合适
+using namespace std;        
 
 int n;      //字符串长度是n
 
@@ -9,7 +11,7 @@ int main()
 {
     string str;
     cin>>n>>str;
-    int res = 0;            //res是需要减去的数，是输出结果
+    int res = 0;            //res是 需要减去的数，是输出结果
     for(int i = 0; i < n; i++)
     {
         if(str[i] == 'x')       //定位 i
